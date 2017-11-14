@@ -11,7 +11,6 @@ void PrintUp(tree* MyTree) {
 	if (MyTree->rightChild != nullptr) {
 		PrintUp(MyTree->rightChild);
 	}
-	return;
 }
 
 void PrintDown(tree* MyTree) {
@@ -22,5 +21,4 @@ void PrintDown(tree* MyTree) {
 	if (MyTree->leftChild != nullptr) {
 		PrintUp(MyTree->leftChild);
 	}
-	return;
 }
