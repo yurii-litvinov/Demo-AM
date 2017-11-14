@@ -7,3 +7,5 @@ struct tree {
 	int value = 0;
 
 };
+
+tree *searchElement(tree *root, int valueToFind);
