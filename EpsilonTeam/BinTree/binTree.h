@@ -7,3 +7,4 @@ struct tree {
 	int value = 0;
 
 };
+
