@@ -28,3 +28,5 @@ HULK, SMASH!
 int main() {
 	return 0;
 }
+
+Денис не бомби:)
