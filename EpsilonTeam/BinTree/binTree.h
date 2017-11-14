@@ -7,3 +7,7 @@ struct tree {
 	int value = 0;
 
 };
+
+void PrintUp(tree* MyTree);
+
+void PrinDown(tree* MyTree);
