@@ -8,4 +8,9 @@ struct tree {
 
 };
 
-tree *searchElement(tree *root, int valueToFind);
+
+tree *searchElement(tree *MyTree, int valueToFind);
+
+void PrintUp(tree* MyTree);
+
+void PrintDown(tree* MyTree);
