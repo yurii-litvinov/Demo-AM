@@ -4,16 +4,23 @@
 using namespace std;
 
 void PrintUp(tree* MyTree) {
-	while (MyTree->leftChild != nullptr)
-	{
-		MyTree = MyTree->leftChild;
+	if (MyTree->leftChild != nullptr) {
+		PrintUp(MyTree->leftChild);
 	}
 	cout << MyTree->value;
-	if (MyTree->parent != nullptr) {
-		cout << MyTree->value;
-	}
 	if (MyTree->rightChild != nullptr) {
 		PrintUp(MyTree->rightChild);
+	}
+	return;
+}
+
+void PrintDown(tree* MyTree) {
+	if (MyTree->rightChild != nullptr) {
+		PrintUp(MyTree->rightChild);
+	}
+	cout << MyTree->value;
+	if (MyTree->leftChild != nullptr) {
+		PrintUp(MyTree->leftChild);
 	}
 	return;
 }

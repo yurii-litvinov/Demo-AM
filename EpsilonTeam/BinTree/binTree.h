@@ -10,4 +10,4 @@ struct tree {
 
 void PrintUp(tree* MyTree);
 
-void PrinDown(tree* MyTree);
+void PrintDown(tree* MyTree);
