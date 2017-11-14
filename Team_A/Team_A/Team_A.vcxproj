@@ -112,6 +112,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp" />
+    <ClCompile Include="Structures.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Structures.h" />
