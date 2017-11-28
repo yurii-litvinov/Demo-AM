@@ -15,3 +15,5 @@ void PrintUp(tree* MyTree);
 
 // печать по убыванию, рекурсивно
 void PrintDown(tree* MyTree);
+
+void PushElement(tree* MyTree, int value);

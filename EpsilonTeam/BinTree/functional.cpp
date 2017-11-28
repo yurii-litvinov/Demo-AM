@@ -22,3 +22,37 @@ void PrintDown(tree* MyTree) {
 		PrintUp(MyTree->leftChild);
 	}
 }
+
+void PushElement(tree* myTree, int value)
+{
+	if (value == myTree->value)
+	{
+		return;
+	}
+	else if (value < myTree->value)
+	{
+		if (myTree->leftChild == nullptr)
+		{
+			tree* newChild = new tree;
+			newChild->value = value;
+			myTree->leftChild = newChild;
+		}
+		else
+		{
+			PushElement(myTree->leftChild, value);
+		}
+	}
+	else if (value > myTree->value)
+	{
+		if (myTree->rightChild == nullptr)
+		{
+			tree* newChild = new tree;
+			newChild->value = value;
+			myTree->rightChild = newChild;
+		}
+		else
+		{
+			PushElement(myTree->rightChild, value);
+		}
+	}
+}
