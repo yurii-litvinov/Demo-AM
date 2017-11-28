@@ -5,10 +5,9 @@ using namespace std;
 
 int main() {
 	setlocale(LC_ALL, "RUSSIAN");
-	cout << "создайте новое дерево, введф новый элемент" << endl;
+	cout << "создайте новое дерево, введя новый элемент" << endl;
 	int x;
 	cin >> x;
-	tree* MyTree = new tree;
 	int choose = 0;
 	cout << "0 - выйти" << endl;
 	cout << "1 - добавить элемент" << endl;

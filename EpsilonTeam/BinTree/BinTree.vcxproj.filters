@@ -15,6 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
+
     <ClCompile Include="functional.cpp">
       <Filter>Файлы исходного кода</Filter>
     </ClCompile>
