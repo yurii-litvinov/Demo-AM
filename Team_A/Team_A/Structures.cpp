@@ -33,7 +33,7 @@ void addNode(Tree* tree, int value)
 
 }
 
-Tree* createTree(int startValue)
+Tree* createTree()
 {
 	Tree* tree = new Tree;
 	Node* root = new Node;
