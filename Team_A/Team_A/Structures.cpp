@@ -116,7 +116,7 @@ void deleteNode(Tree* tree, int value)
 }
 void addNode(Tree* tree, int value)
 {
-	Node* current = tree->head;
+  Node* current = tree->head;
 	bool found = false;
 	while (!found)
 	{
@@ -149,4 +149,12 @@ void addNode(Tree* tree, int value)
 			found = true;
 		}
 	}
+}
+
+Tree* createTree()
+{
+	Tree* tree = new Tree;
+	Node* root = new Node;
+	tree->head = root;
+	return tree;
 }
