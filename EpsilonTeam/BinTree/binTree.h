@@ -8,10 +8,19 @@ struct tree {
 
 };
 
-void DeleteElement(tree* MyTree, int DeleteNumber);
+tree *searchElement(tree *MyTree, int valueToFind);
 
-// печать по возрастанию, рекурсивно
+void DeleteElement(int DeleteNumber);
+
+// ГЇГҐГ·Г ГІГј ГЇГ® ГўГ®Г§Г°Г Г±ГІГ Г­ГЁГѕ, Г°ГҐГЄГіГ°Г±ГЁГўГ­Г®
 void PrintUp(tree* MyTree);
 
-// печать по убыванию, рекурсивно
+// ГЇГҐГ·Г ГІГј ГЇГ® ГіГЎГ»ГўГ Г­ГЁГѕ, Г°ГҐГЄГіГ°Г±ГЁГўГ­Г®
 void PrintDown(tree* MyTree);
+
+// find minimum element lower, then current 
+tree* findMin(tree* element);
+
+// find maximum element lower, then current
+
+void PushElement(tree* MyTree, int value);

@@ -24,7 +24,6 @@ void PrintDown(tree* MyTree) {
 		PrintUp(MyTree->leftChild);
 	}
 }
-
 void DeleteElement(tree* MyTree, int DeleteNumber) {
 	tree* DeleteTreeElement = Search(MyTree, DeleteNumber);
 	if ((DeleteTreeElement->leftChild == nullptr) && (DeleteTreeElement->rightChild == nullptr)) {
@@ -85,4 +84,70 @@ void DeleteTree(tree* MyTree) {
 	}
 	delete MyTree;
 	return;
+}
+
+tree *searchELement(tree *MyTree, int valueToFind) {
+	tree *treeWalker = MyTree;
+	while (treeWalker != nullptr) {
+		if (valueToFind < treeWalker->value) {
+			treeWalker = treeWalker->leftChild;
+		}
+		else {
+			if (valueToFind > treeWalker->value) {
+				treeWalker = treeWalker->leftChild;
+			}
+			else {
+				return treeWalker;
+			}
+		}
+	}
+	return nullptr;
+}
+
+tree* findMin(tree* element) {
+	while (element->leftChild != nullptr) {
+		element = element->leftChild;
+	}
+	return element;
+}
+
+tree* findMax(tree* element) {
+	while (element->rightChild != nullptr) {
+		element = element->rightChild;
+	}
+	return element;
+}
+
+void PushElement(tree* myTree, int value)
+{
+	if (value == myTree->value)
+	{
+		return;
+	}
+	else if (value < myTree->value)
+	{
+		if (myTree->leftChild == nullptr)
+		{
+			tree* newChild = new tree;
+			newChild->value = value;
+			myTree->leftChild = newChild;
+		}
+		else
+		{
+			PushElement(myTree->leftChild, value);
+		}
+	}
+	else if (value > myTree->value)
+	{
+		if (myTree->rightChild == nullptr)
+		{
+			tree* newChild = new tree;
+			newChild->value = value;
+			myTree->rightChild = newChild;
+		}
+		else
+		{
+			PushElement(myTree->rightChild, value);
+		}
+	}
 }
