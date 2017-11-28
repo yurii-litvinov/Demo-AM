@@ -17,3 +17,9 @@ void PrintUp(tree* MyTree);
 
 // печать по убыванию, рекурсивно
 void PrintDown(tree* MyTree);
+
+// find minimum element lower, then current 
+tree* findMin(tree* element);
+
+// find maximum element lower, then current
+tree* findMax(tree* element);
