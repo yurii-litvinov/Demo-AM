@@ -8,7 +8,7 @@ struct tree {
 
 };
 
-void DeleteElement(int DeleteNumber);
+void DeleteElement(tree* MyTree, int DeleteNumber);
 
 // печать по возрастанию, рекурсивно
 void PrintUp(tree* MyTree);
