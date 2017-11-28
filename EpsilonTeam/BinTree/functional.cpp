@@ -23,6 +23,38 @@ void PrintDown(tree* MyTree) {
 	}
 }
 
+tree *searchELement(tree *MyTree, int valueToFind) {
+	tree *treeWalker = MyTree;
+	while (treeWalker != nullptr) {
+		if (valueToFind < treeWalker->value) {
+			treeWalker = treeWalker->leftChild;
+		}
+		else {
+			if (valueToFind > treeWalker->value) {
+				treeWalker = treeWalker->leftChild;
+			}
+			else {
+				return treeWalker;
+			}
+		}
+	}
+	return nullptr;
+}
+
+tree* findMin(tree* element) {
+	while (element->leftChild != nullptr) {
+		element = element->leftChild;
+	}
+	return element;
+}
+
+tree* findMax(tree* element) {
+	while (element->rightChild != nullptr) {
+		element = element->rightChild;
+	}
+	return element;
+}
+
 void PushElement(tree* myTree, int value)
 {
 	if (value == myTree->value)
