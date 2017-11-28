@@ -15,19 +15,17 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="binTree.h">
-      <Filter>Файлы исходного кода</Filter>
-    </ClInclude>
-    <ClInclude Include="resource.h">
-      <Filter>Файлы исходного кода</Filter>
-    </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
+
     <ClCompile Include="functional.cpp">
       <Filter>Файлы исходного кода</Filter>
     </ClCompile>
     <ClCompile Include="Source.cpp">
       <Filter>Файлы исходного кода</Filter>
     </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="binTree.h">
+      <Filter>Заголовочные файлы</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
