@@ -151,10 +151,11 @@ void addNode(Tree* tree, int value)
 	}
 }
 
-Tree* createTree()
+Tree* createTree(int startValue)
 {
 	Tree* tree = new Tree;
 	Node* root = new Node;
+	root->value = startValue;
 	tree->head = root;
 	return tree;
 }

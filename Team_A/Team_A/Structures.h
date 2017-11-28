@@ -15,4 +15,4 @@ struct Tree
 Node* find(Tree* tree, int value);
 void deleteNode(Tree* tree, int value);
 void addNode(Tree* tree, int value);
-Tree* createTree(); // Root node will have the startValue as it's value
+Tree* createTree(int startValue); // Root node will have the startValue as it's value
