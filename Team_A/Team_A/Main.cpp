@@ -9,5 +9,5 @@ int main()
 	addNode(myTree, 2);
 	addNode(myTree, 1);
 	addNode(myTree, 3);
-	return 0;
+	return 0;//Какой-нибудь коммент
 }
