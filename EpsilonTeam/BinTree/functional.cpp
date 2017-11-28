@@ -47,6 +47,29 @@ void DeleteElement(tree* MyTree, int DeleteNumber) {
 	}
 
 	if (DeleteTreeElement->rightChild) {
-		tree* TempTree
+		tree* TempTree = ;
+		if (TempTree->parent == DeleteTreeElement) {
+			DeleteTreeElement->value = TempTree->value;
+			DeleteTreeElement->rightChild = TempTree->rightChild;
+			delete TempTree;
+			return;
+		}
+
+		DeleteTreeElement->value = TempTree->value;
+		TempTree->parent->leftChild = TempTree->rightChild;
+		delete TempTree;
+		return;
 	}
+	tree* TempTree = ;
+	if (TempTree->parent == DeleteTreeElement) {
+		DeleteTreeElement->value = TempTree->value;
+		DeleteTreeElement->leftChild = TempTree->leftChild;
+		delete TempTree;
+		return;
+	}
+
+	DeleteTreeElement->value = TempTree->value;
+	TempTree->parent->rightChild = TempTree->leftChild;
+	delete TempTree;
+	return;
 }
