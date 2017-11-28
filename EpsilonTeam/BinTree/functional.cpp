@@ -73,3 +73,16 @@ void DeleteElement(tree* MyTree, int DeleteNumber) {
 	delete TempTree;
 	return;
 }
+
+void DeleteTree(tree* MyTree) {
+	if (MyTree->leftChild != nullptr)
+	{
+		DeleteTree(MyTree->leftChild);
+	}
+	if (MyTree->rightChild != nullptr)
+	{
+		DeleteTree(MyTree->rightChild);
+	}
+	delete MyTree;
+	return;
+}
