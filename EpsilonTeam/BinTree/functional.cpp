@@ -48,3 +48,9 @@ tree* findMin(tree* element) {
 	return element;
 }
 
+tree* findMax(tree* element) {
+	while (element->rightChild != nullptr) {
+		element = element->rightChild;
+	}
+	return element;
+}
